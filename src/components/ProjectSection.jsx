@@ -29,9 +29,8 @@ export const ProjectsSection = () => {
           Featured<span className="text-primary "> Projects</span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur odio
-          vitae distinctio sapiente reiciendis fugiat enim quam numquam natus
-          eius?
+          A showcase of innovative projects demonstrating expertise in
+          full-stack development, problem-solving, and user-focused design.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project, key) => (
@@ -61,13 +60,15 @@ export const ProjectsSection = () => {
                 </p>
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <ExternalLink size={20} />{" "}
-                    </a>
+                    {project.demoUrl && project.demoUrl !== "#" && (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      >
+                        <ExternalLink size={20} />
+                      </a>
+                    )}
                     <a
                       href={project.githubUrl}
                       target="_blank"
@@ -83,9 +84,14 @@ export const ProjectsSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <a href="https://github.com/RangelShishkov" target="_blank" className="cosmic-button w-fit flex items-center mx-auto gap-2">Check out my github <ArrowRight size={16} /> </a>
+          <a
+            href="https://github.com/RangelShishkov"
+            target="_blank"
+            className="cosmic-button w-fit flex items-center mx-auto gap-2"
+          >
+            Check out my github <ArrowRight size={16} />{" "}
+          </a>
         </div>
-
       </div>
     </section>
   );

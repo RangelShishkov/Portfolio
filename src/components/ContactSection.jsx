@@ -15,17 +15,17 @@ export const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSubmit = (e) => {
-
     e.preventDefault();
     setIsSubmitting(true);
 
     setTimeout(() => {
       toast({
         title: "Message was NOT sent!",
-        description: "Sorry, but the form is not working currently please contact me trough gmail.com",
+        description:
+          "Sorry, but the form currently isn't working. Please contact me through gmail.com",
       });
       setIsSubmitting(false);
-    }, 1500);
+    }, 1337);
   };
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
@@ -34,8 +34,8 @@ export const ContactSection = () => {
           Contact <span className="text-primary">Me</span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum,
-          doloremque. Totam nobis alias ipsa esse!
+          Feel free to reach out! I'm always open to new opportunities,
+          collaborations, or just a quick chat.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8 ">
@@ -81,19 +81,25 @@ export const ContactSection = () => {
                 </div>
               </div>
             </div>
-            <div className="pt-8">
-              <h4>Connect with me</h4>
+            <div className="pt-6">
+              <h4 className="mb-2">Connect with me</h4>
               <div className="flex space-x-4 justify-center font-medium mb-4">
                 <a
+                  className="hover:text-primary"
                   href="https://www.linkedin.com/in/rshishkov/"
                   target="_blank"
                 >
                   <Linkedin />
                 </a>
-                <a href="https://github.com/RangelShishkov" target="_blank">
+                <a
+                  className="hover:text-primary"
+                  href="https://github.com/RangelShishkov"
+                  target="_blank"
+                >
                   <Github />
                 </a>
                 <a
+                  className="hover:text-primary"
                   href="https://www.facebook.com/rangel.shishkov.3/"
                   target="_blank"
                 >
@@ -107,21 +113,20 @@ export const ContactSection = () => {
             onSubmit={handleSubmit}
             className="bg-card p-8 rounded-lg shadow-xs"
           >
-            <h3 className="text-2xl font-semibold mb-6">Send a message</h3>
+            <h3 className="text-2xl font-semibold mb-6">Send me a message</h3>
             <form action="" className="space-y-6">
               <div>
                 <label
                   htmlFor="name"
                   className="block text-sm font-medium mb-2"
                 >
-                  Your Name
+                  Name
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   placeholder="John Doe..."
-                  required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                 />
               </div>
@@ -130,14 +135,13 @@ export const ContactSection = () => {
                   htmlFor="email"
                   className="block text-sm font-medium mb-2"
                 >
-                  Your Email
+                  Email
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   placeholder="John@Doe.com..."
-                  required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                 />
               </div>
@@ -146,13 +150,12 @@ export const ContactSection = () => {
                   htmlFor="name"
                   className="block text-sm font-medium mb-2"
                 >
-                  Your Message
+                  Message
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   placeholder="Hello, I'd like to contact you..."
-                  required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
                 />
               </div>

@@ -20,19 +20,21 @@ export const HeroSection = () => {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-            consectetur reiciendis, earum fuga error, officia, nulla ducimus
-            quasi id eum fugiat voluptatum? Porro, vero similique.
+            JavaScript Developer with a solid foundation in both front-end and
+            back-end development. With expertise in the MERN stack, I have
+            successfully built dynamic and scalable web applications.
           </p>
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
             <a href="#projects" className="cosmic-button">
-                View My Projects
+              View My Projects
             </a>
           </div>
         </div>
       </div>
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-            <ArrowDown className="h-7 w-7 text-primary" />
+       <a href="#about">
+<ArrowDown className="h-7 w-7 text-primary" />
+        </a> 
       </div>
     </section>
   );
